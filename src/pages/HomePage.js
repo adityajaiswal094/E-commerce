@@ -9,19 +9,16 @@ import React from "react";
 //   Typography,
 // } from "@mui/material";
 
-import ItemCard from "../components/ItemCard";
 import Appbar from "../components/Appbar";
 import { Box } from "@mui/material";
+import ItemList from "../components/ItemList";
 
 export default function HomePage() {
   return (
     <>
       <Box sx={boxStyle}>
-        {/* appbar */}
-        <Appbar />
-
         {/* body */}
-        <ItemCard />
+        <ItemList />
       </Box>
     </>
   );

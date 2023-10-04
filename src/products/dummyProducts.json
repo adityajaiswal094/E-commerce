@@ -7,49 +7,49 @@
         "price": "69,499"
     },
     {
-        "id": 1,
+        "id": 2,
+        "name": "Apple iPhone 14",
+        "description": "All new Apple iPhone 14 with latest A17 bionic chip and the first dynamic island.",
+        "imageUrl": "https://media.croma.com/image/upload/v1662655662/Croma%20Assets/Communication/Mobiles/Images/261979_oq7vjv.png",
+        "price": "69,499"
+    },
+    {
+        "id": 3,
         "name": "Apple MacBook Air M1",
         "description": "All new Apple MacBook Air with fastest chip M1. Increases performance by 40%.",
         "imageUrl": "https://i.gadgets360cdn.com/products/large/macbook-air-m1-2020-db-800x600-1607604365.png",
         "price": "69,499"
     },
     {
-        "id": 1,
+        "id": 4,
         "name": "Apple MacBook Air M1",
         "description": "All new Apple MacBook Air with fastest chip M1. Increases performance by 40%.",
         "imageUrl": "https://i.gadgets360cdn.com/products/large/macbook-air-m1-2020-db-800x600-1607604365.png",
         "price": "69,499"
     },
     {
-        "id": 1,
+        "id": 5,
         "name": "Apple MacBook Air M1",
         "description": "All new Apple MacBook Air with fastest chip M1. Increases performance by 40%.",
         "imageUrl": "https://i.gadgets360cdn.com/products/large/macbook-air-m1-2020-db-800x600-1607604365.png",
         "price": "69,499"
     },
     {
-        "id": 1,
+        "id": 6,
         "name": "Apple MacBook Air M1",
         "description": "All new Apple MacBook Air with fastest chip M1. Increases performance by 40%.",
         "imageUrl": "https://i.gadgets360cdn.com/products/large/macbook-air-m1-2020-db-800x600-1607604365.png",
         "price": "69,499"
     },
     {
-        "id": 1,
+        "id": 7,
         "name": "Apple MacBook Air M1",
         "description": "All new Apple MacBook Air with fastest chip M1. Increases performance by 40%.",
         "imageUrl": "https://i.gadgets360cdn.com/products/large/macbook-air-m1-2020-db-800x600-1607604365.png",
         "price": "69,499"
     },
     {
-        "id": 1,
-        "name": "Apple MacBook Air M1",
-        "description": "All new Apple MacBook Air with fastest chip M1. Increases performance by 40%.",
-        "imageUrl": "https://i.gadgets360cdn.com/products/large/macbook-air-m1-2020-db-800x600-1607604365.png",
-        "price": "69,499"
-    },
-    {
-        "id": 1,
+        "id": 8,
         "name": "Apple MacBook Air M1",
         "description": "All new Apple MacBook Air with fastest chip M1. Increases performance by 40%.",
         "imageUrl": "https://i.gadgets360cdn.com/products/large/macbook-air-m1-2020-db-800x600-1607604365.png",

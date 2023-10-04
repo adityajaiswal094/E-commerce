@@ -1,15 +1,45 @@
-import { Card, CardHeader, CardMedia, Paper } from "@mui/material";
+import {
+  Box,
+  Divider,
+  Grid,
+  Paper,
+  Stack,
+  Typography,
+} from "@mui/material";
 import React from "react";
 
-export default function ItemCard() {
+export default function ItemCard({ imageUrl, name, description, price }) {
   return (
     <>
-      <Paper>
-        <Card sx={{ display: 'flex' }}>
-            <CardMedia src="https://i.gadgets360cdn.com/products/large/macbook-air-m1-2020-db-800x600-1607604365.png"></CardMedia>
-            <CardHeader></CardHeader>
-        </Card>
-      </Paper>
+      <Box sx={{flexGrow: 1}} display="flex" width="100vw" height="120" /* justifyContent={"center"} alignItems={"center"} */>
+        <Paper elevation={0}>
+          <Grid container spacing={2}>
+            <Grid item xs={2} md={4} lg={4}>
+              <Box
+                component="img"
+                sx={{
+                  // height: 233,
+                  // width: 350,
+                  maxHeight: { xs: 480, md: 167 },
+                  maxWidth: { xs: 350, md: 250 },
+                }}
+                alt={name}
+                src={imageUrl}
+              />
+            </Grid>
+            <Grid item xs={2} md={4} lg={4}>
+              <Stack direction={"column"} spacing={2}>
+                <Typography>{name}</Typography>
+                <Typography>{description}</Typography>
+              </Stack>
+            </Grid>
+            <Grid item xs={2} md={4} lg={4}>
+              <Typography>{price}</Typography>
+            </Grid>
+          </Grid>
+          <Divider />
+        </Paper>
+      </Box>
     </>
   );
 }
