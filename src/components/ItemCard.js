@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import FormatPrice from "../helper/FormatPrice";
 
 export default function ItemCard({ imageUrl, name, description, price }) {
   return (
@@ -34,7 +35,7 @@ export default function ItemCard({ imageUrl, name, description, price }) {
               </Stack>
             </Grid>
             <Grid item xs={2} md={4} lg={4}>
-              <Typography>{price}</Typography>
+              <Typography>{<FormatPrice price={price} />}</Typography>
             </Grid>
           </Grid>
           <Divider />
