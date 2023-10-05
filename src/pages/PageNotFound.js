@@ -1,7 +1,7 @@
-import { Button } from "@mui/material";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { Button } from "../components/Button";
 
 export default function PageNotFound() {
   return (
