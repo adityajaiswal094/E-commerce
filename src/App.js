@@ -11,10 +11,16 @@ import PageNotFound from "./pages/PageNotFound";
 import Appbar from "./components/Appbar";
 import { theme } from "./utils/Theme";
 import { GlobalStyle } from "./GlobalStyle";
+import Test from "./pages/Test";
+// import { useGetProductsQuery } from "./store/productsApi";
+// import { FilterContext } from "./context/helper";
 
 function App() {
+  // const { data } = useGetProductsQuery();
+
   return (
     <ThemeProvider theme={theme}>
+      {/* <FilterContext.Provider value={data}> */}
       <GlobalStyle />
       <BrowserRouter>
         <Appbar />
@@ -24,9 +30,11 @@ function App() {
           <Route path="/auth" element={<Auth />} />
           <Route path="/singleproduct/:id" element={<SingleProduct />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/test" element={<Test />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
+      {/* </FilterContext.Provider> */}
     </ThemeProvider>
   );
 }

@@ -1,34 +1,45 @@
+import React from "react";
 import { Icon } from "@mui/material";
-import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
+import ProductColors from "./ProductColors";
+import { incrementCount, decrementCount } from "../store/productCountSlice";
+import { Button } from "../components/Button";
+import { NavLink } from "react-router-dom";
 
 export default function AddToCart({ product }) {
-  const { id, colors, stock } = product;
+  const { /* id, */ colors, stock } = product;
 
-  const [selectedColor, setSelectedColor] = useState(colors[0]);
+  const productCount = useSelector((state) => state.productCount.value);
+  const dispatch = useDispatch();
 
   return (
     <Wrapper>
       <div className="colors">
-        <p>
-          Color:
-          {colors.map((color, index) => {
-            return (
-                <button
-                  key={index}
-                  style={{ backgroundColor: color }}
-                  className="buttonStyle"
-                  onClick={() => {
-                    setSelectedColor(color);
-                  }}
-                >
-                  <Icon color="info">
-                    {color === selectedColor ? "check" : null}
-                  </Icon>
-                </button>
-            );
-          })}
-        </p>
+        {/* colors */}
+        <ProductColors colors={colors} />
+
+        {/* add to cart count */}
+        <div className="amount-toggle">
+          <button onClick={() => dispatch(decrementCount())}>
+            <Icon>remove</Icon>
+          </button>
+          <div className="amount-style">{productCount}</div>
+          <button
+            onClick={() => {
+              if (productCount < stock) {
+                dispatch(incrementCount());
+              }
+            }}
+          >
+            <Icon>add</Icon>
+          </button>
+        </div>
+
+        {/* add to cart button */}
+        <NavLink to="/cart">
+          <Button onClick={() => {}}>Add to cart</Button>
+        </NavLink>
       </div>
     </Wrapper>
   );
@@ -63,7 +74,7 @@ const Wrapper = styled.section`
     margin-bottom: 1rem;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-end;
     font-size: 1.4rem;
 
     button {

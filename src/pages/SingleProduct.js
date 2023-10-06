@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import PageNavigation from "../components/PageNavigation";
 import { Container } from "../components/Container";
-import FormatPrice from "../helper/FormatPrice";
+import FormatPrice from "../helper/helper";
 import Star from "../components/Star";
 import AddToCart from "./AddToCart";
 

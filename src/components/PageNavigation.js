@@ -1,11 +1,13 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 export default function PageNavigation({ title }) {
+  let goBack = useNavigate();
+
   return (
     <Wrapper>
-      <NavLink to="/">Home</NavLink>/{title}
+      <NavLink onClick={() => goBack(-1)}>Home</NavLink>/{title}
     </Wrapper>
   );
 }
